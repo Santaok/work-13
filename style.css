@@ -1,0 +1,197 @@
+body{
+    /* задаёт путь до файла */
+    background-image: var(--back-image);
+    /* задает стартовое положение изображения на странице */
+    background-position: center center;
+    /* определяет размер изображения на странице */
+    background-size: cover;
+    /* свойство устанавливает, будет ли повторяться изображение и каким образом */
+    background-repeat: no-repeat;
+    /* cвойство определяет, будет ли фоновое изображение прокручиваться 
+    вместе с остальной частью страницы или будет фиксированным */
+    background-attachment: fixed;
+  
+    /* возможна также и короткая запись данных свойств */
+    background: var(--back-image) center center no-repeat  fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+@font-face{
+
+    font-family: "Mano";
+    
+        src:url(/fonts/ofont.ru_Wizland.ttf);
+    
+    
+    
+    }
+
+.content{
+    width: 100vw;
+    height: 100vh;
+   
+   
+}
+body{
+    margin: 0;
+}
+
+header{
+background-color: var(--back-color-header);
+text-align: center;
+color: var(--color);
+font-size: 30px;
+height: 40vh;
+border: 5px solid black;
+top: 0;
+
+
+}
+
+  
+
+.logo{
+
+width: 10vw;
+border-radius: 1.6vw;
+position: absolute;
+left:40px;
+top: 20px;
+
+
+}
+.title{
+   font-family: "Mano";
+   color: var(--color-title);
+   
+   z-index: 2;
+   
+
+   position: absolute;
+   top: 0;
+left: 10vw;
+
+
+}
+.img{
+width: 100vw;
+height: 50vh;
+z-index: -1;
+
+}
+
+
+main{
+margin-top: 0;
+background-color: rgba(166, 82, 13, 0);
+display: grid;
+grid-template-columns: 1fr 2fr;
+
+
+
+
+}
+
+footer{
+    background-color: var(--back-color-footer);
+    font-size: 30px;
+    color: aliceblue;
+    top: 20px;
+    height: 35vh;
+    text-align: center;
+}
+ul{
+line-height: 120px;
+font-size: 1.2vw;
+list-style: none;
+background-color: var(--back-color-uslugi);
+border-radius: 10px;
+width: 10vw;
+text-align: start;
+margin-left: 10px;
+
+
+}
+li{
+ 
+    color: var(--color)
+}
+img:not(.logo,.title){
+
+width: 15vw;
+margin: auto;
+border: 8px solid var(--color-border-cars)
+}
+
+img:not(.logo,.title):hover{
+
+    transform: matrix(1.2, 0.1, 0, 1.2, 25, 25);
+
+
+
+}
+.grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20;
+        width: 100%
+        
+}
+.links{
+
+
+display: flex;
+justify-content: flex-end;
+ 
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: flex-start
+
+
+}
+a{
+
+    display: inline-block;
+    gap: 70px;
+
+
+
+}
+#theme-toggle {
+    display: none;
+  }
+  
+  .theme-switch {
+    display: inline-block;
+    position: absolute;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #bdc5e7a4;
+    border-radius: 5px;
+    color: #070505;
+   left: 40px;
+    top: 180px;
+
+  }  
+  :root{
+    --back-image: url(https://i.pinimg.com/564x/2a/fb/7a/2afb7a9a4335d4095932005d1740e073.jpg);
+    --color: #060506;
+    --back-color-header: rgba(217, 185, 228, 0.692);
+    --back-color-uslugi: #cbbdbdaa;
+    --back-color-footer: #1ac4919c;
+    --color-border-cars: #00ca7dc9;
+    --color-link: #ffffff;
+    --color-title: #000000b1;
+    
+  }
+  #theme-toggle:checked ~ .content {
+     
+    --back-image: url(https://i.pinimg.com/564x/93/cd/6f/93cd6f16d1e0a76a91f4beb6fd8e2a86.jpg);
+    --color: #fcfbfb;
+    --back-color-header: rgba(112, 0, 153, 0.853);
+    --back-color-uslugi: rgba(0, 0, 0, 0.9);
+    --back-color-footer: rgba(0, 0, 0, 0.63);
+    --color-border-cars: #9e0ed66d;
+    --color-link: #000000f2;
+    --color-title: #cb0ed5b1;
+  }
